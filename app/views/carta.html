@@ -1,0 +1,90 @@
+<!-- INICIO CARTA -->
+<div ng-controller="CartaCtrl as carta">
+    <!--div class="accordion well" id="accordion">
+        <div class="accordion-group">
+            <div class="accordion-heading well">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1" data-dismiss=".collapse in">
+        ENTRANTES
+      </a>
+            </div>
+            <div id="collapse1" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <ul class="media-list">
+                        <li class="well media col-md-12" ng-repeat="plato in carta.platos" ng-class="">
+                            <img class="img-responsive col-md-2" ng-src="{{plato.th}}">
+                            <div class="media-body col-md-10">
+                                <h3 class="media-heading">{{plato.nombre}}</h3>
+                                <p>{{plato.descripcion}}</p>
+                                <p>Precio: {{plato.precio | currency}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading well">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse2">PRIMEROS</a>
+            </div>
+            <div id="collapse2" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    Anim pariatur cliche...
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="accordion-heading well">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse3">SEGUNDOS</a>
+            </div>
+            <div id="collapse3" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    Anim pariatur cliche...
+                </div>
+            </div>
+        </div>
+    </div-->
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
+        </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul class="media-list">
+                        <li class="well media col-md-12" ng-repeat="plato in carta.platos.entrantes" ng-class="">
+                            <img class="img-responsive col-md-2" ng-src="{{plato.th}}">
+                            <div class="media-body col-md-10">
+                                <h3 class="media-heading">{{plato.nombre}}</h3>
+                                <p>{{plato.descripcion}}</p>
+                                <p>Precio: {{plato.precio | currency}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
+        </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
+        </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN CARTA -->
