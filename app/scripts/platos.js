@@ -1,4 +1,7 @@
+'use strict';
+
 (function() {
+    /*
     var app = angular.module('AppPlatos', []);
 
     app.controller('PlatosCtrl', ['$http', function($http) {
@@ -11,7 +14,7 @@
 
     }]);
 
-
+*/
 
     /*app.service('PlatosService', ['$http', function($http) {
         //var self = this;

@@ -16,18 +16,24 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <!-- build:js(.) scripts/vendor.js -->    
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>    
+    <!-- endbower -->
+    <script src="scripts/angular-route.js"></script>
+    <!-- endbuild -->
 </head>
 
 <body>
     <div class="container">
         <div class="header">
             <ul class="nav nav-pills pull-right">
-                <li class="active"><a href="inicio">Inicio</a></li>
-                <li><a href="carta">Carta</a></li>
-                <li><a href="menus">Menús</a></li>
-                <li><a href="galeria">Galería</a></li>
-                <li><a href="reserva">Reserva</a></li>
-                <li><a href="contacto">Contacto</a></li>
+                <li class="active"><a href="#/inicio">Inicio</a></li>
+                <li><a href="#/carta">Carta</a></li>
+                <li><a href="#/menus">Menús</a></li>
+                <li><a href="#/galeria">Galería</a></li>
+                <li><a href="#/reservas">Reservas</a></li>
+                <li><a href="#/contacto">Contacto</a></li>
             </ul>
             <h3 class="text-muted">practica_diw</h3>
         </div>
@@ -39,6 +45,7 @@
             <li><a href="reserva">Reserva</a></li>
             <li><a href="contacto">Contacto</a></li>
         </ol>
+        <div data-ng-view></div>
         <div id="inicio" class="container-fluid well" ng-include="views/inicio" scope="" onload="">
             inicio
         </div>
@@ -63,7 +70,6 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js(.) scripts/plugins.js -->

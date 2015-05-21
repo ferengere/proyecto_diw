@@ -1,7 +1,41 @@
 'use strict';
 
 (function() {
-    var app = angular.module('WebApp', []);
+    var app = angular.module('WebApp', ['ngRoute']);
+
+    app.config(['$routeProvider' ,function($routeProvider) {
+            $routeProvider.
+               when('/inicio', {
+                  templateUrl: 'views/inicio.html',
+                  controller: 'InicioCtrl as inicio'
+               }).
+               when('/carta', {
+                  templateUrl: 'views/carta.html',
+                  controller: 'CartaCtrl as carta'
+               }).
+               when('/menus', {
+                  templateUrl: 'views/menus.html',
+                  controller: 'MenusCtrl as menus'
+               }).
+               when('/galeria', {
+                  templateUrl: 'views/galeria.html',
+                  controller: 'GaleriaCtrl as galeria'
+               }).
+               when('/reservas', {
+                  templateUrl: 'views/reservas.html',
+                  controller: 'ReservasCtrl as reservas'
+               }).
+               when('/contacto', {
+                  templateUrl: 'views/contacto.html',
+                  controller: 'ContactoCtrl as contacto'
+               }).
+               otherwise({
+                  redirectTo: '/inicio'
+               });
+        }]);
+
+app.controller('InicioCtrl', function(){});
+
 
     app.controller('CartaCtrl', ['$http', function($http) {
         var self = this;
@@ -12,6 +46,12 @@
         });
 
     }]);
+    app.controller('MenusCtrl', function(){});
+    app.controller('GaleriaCtrl', function(){});
+    app.controller('ReservasCtrl', function(){});
+    app.controller('ContactoCtrl', function(){});
+
+    app.service();
 
 
 
