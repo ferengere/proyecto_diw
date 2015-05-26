@@ -1,11 +1,11 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="es" data-ng-app="webApp">
 
 <head>
     <meta charset="utf-8">
     <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="web restaurante">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -14,43 +14,56 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/style.css">
     <!-- endbuild -->
 </head>
 
-<body ng-app="webApp">
+<body>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Add your site or application content here -->
-    <div class="header">
-        <div class="navbar navbar-default" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#/">proyectoDiw</a>
-                </div>
-                <div class="collapse navbar-collapse" id="js-navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#/inicio">Inicio</a></li>
-                        <li><a ng-href="#/carta">Carta</a></li>
-                        <li><a ng-href="#/menus">Menús</a></li>
-                    </ul>
-                </div>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#!/">Restaurante La Cazuela</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#!/">Inicio</a></li>
+                    <li><a href="#!/carta">Carta</a></li>
+                    <li><a href="#!/menus">Menús</a></li>
+                    <li><a href="#!/galeria">Galeria</a></li>
+                    <li><a href="#!/reservas">Reservas</a></li>
+                    <li><a href="#!/contacto">Contacto</a></li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
     <div class="container">
+        <div class="header">
+            <!--div><img class="img-responsive" src="http://placehold.it/1200x200"></div-->
+            <div><img class="img-responsive" src="http://lorempixel.com/1200/200/cats/8"></div>
+        </div>
         <!--div ng-include="'views/main.html'" ng-controller="MainCtrl"></div-->
-        <div ng-view=""></div>
+        <div data-ng-view=""></div>
     </div>
     <div class="footer">
         <div class="container">
-            <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+            <div class="row">
+                <div class="col-md-4">iconos social</div>
+                <div class="col-md-4">
+                    <p>Oscar Pérez - 2015</p>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
         </div>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -58,13 +71,22 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!--script src="bower_components/bootstrap/dist/js/bootstrap.js"></script-->
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/respond/dest/respond.src.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="data/data.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/routes.js"></script>
+    <script src="controllers/inicioCtrl.js"></script>
+    <script src="controllers/cartaCtrl.js"></script>
+    <script src="controllers/menusCtrl.js"></script>
+    <script src="controllers/galeriaCtrl.js"></script>
+    <script src="controllers/reservasCtrl.js"></script>
+    <script src="controllers/contactoCtrl.js"></script>
+    <!--script src="scripts/main.js"></script-->
     <!-- endbuild -->
 </body>
 
